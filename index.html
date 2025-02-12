@@ -4,10 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>DeepDetection: Deepfake Detection Platform</title>
+    <title>DeepXpose: Deepfake Detection Platform</title>
 </head>
-<body>
-    
+<body class="website">
+    <nav class="navigasi">
+        <img src="assets/logo.png" alt="" id="logo" width="328px" height="71px">
+        <div class="navigasi-button"> <a href="#dropfoto">Deteksi Gambar</a></div>
+        <div class="navigasi-button"> <a href="#langkah">Cara Pemakaian</a></div>
+        <div class="navigasi-button"> <a href="#footerartikel">Tentang Kami</a></div>
+    </nav>
+    <main class="isi">
+        <div class="isi-uploadgambar">
+            <div class="dropfoto" id="dropfoto">
+                <h1>Unggah Gambar Anda</h1>
+                <div class="uploadgambar-header">Jatuhkan</div>
+                <div class="uploadgambar-header"> atau </div>
+                <div class="tombolbrowse">browse</div>
+                <input type="file" hidden>
+                <div class="uploadgambar-support">Mendukung semua format file gambar</div>
+            </div>
+            <div class="tulisandropfoto">
+                <div id="tulisancek">Cek Keaslian Gambar Anda Sekarang</div>
+                <div id="space1"></div>
+                <div><button id="tombolbuktikan" onclick="buktikan">Buktikan Gambar</button></div>
+            </div>
+        </div>
+
+        <div class="isi-sloganartikel">
+            <div class="sloganartikel">
+                <div id="slogan">Pastikan Keaslian Gambar, Lindungi Kebenaran!</div>
+                <div id="artikel">Berkat adanya DeepXpose, integritas suatu informasi dapat dijaga. Website ini menggunakan teknologi machine learning  untuk mendeteksi keaslian gambar secara otomatis. Dengan sekali unggah, sistem kami akan menganalisis pola visual serta kemungkinan manipulasi digital guna memastikan apakah gambar tersebut asli atau telah diedit. Lindungi diri Anda dari informasi palsu dan pastikan keabsahan gambar dengan solusi cepat dan akurat dari kami!</div>
+            </div>
+            <div class="maskotcentang">
+                <img src="assets/maskot main hp dengan centang.png" alt="">
+            </div>
+        </div>
+
+        <div class="isi-contoh">
+            <div class="contohgambar">
+                <img src="contohgambar/soeharto.png" alt="" class="contoh">
+                <img src="contohgambar/trump.png" class="contoh" alt="">
+                <img src="contohgambar/musk.png" alt="" class="contoh">
+                <img src="contohgambar/jokowi.png" alt="" class="contoh">
+            </div>
+            <div class="isi-keterangan">
+                <div class="persentase" id="persentase"></div>
+                <div class="keteragan" id="keterangan">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="isi-carapenggunaan">
+            <div id="carapenggunaan-judul">Cara Penggunaan</div>
+            <div class="langkah-video">
+                <div class="langkah" id="langkah">
+                    <ol>
+                        <li>Screenshot atau foto gambar yang ingin diverifikasi</li>
+                        <li>Unggah gambar tersebut pada situs DeepXpose</li>
+                        <li>Biarkan sistem DeepExpose bekerja</li>
+                        <li>Hasil pengecekan dapat dilihat</li>
+                    </ol>
+                </div>
+                <div class="video">
+                    anggapvideo
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+    <footer>
+        <div class="footerjudul">
+            Tentang Kami
+        </div>
+        <div class="footerartikel" id="footerartikel">
+            DeepXpose merupakan aplikasi berbasis Convolutional Neural Network atau CNN yang dapat mendeteksi gambar deepfake. DeepXpose memudahkan pengguna dalam melakukan cross-check kebenaran suatu berita sehingga dengan adanya aplikasi DeepXpose, masyarakat dapat lebih terbantu dalam mengenali berita hoaks yang menggunakan teknologi deepfake. 
+        </div>
+        <div>
+            Website ini dibuat oleh: <br>
+            Jundi Erlangga Luhur Prawira <br>
+            Marcelino Budi Prakasya
+        </div>
+    </footer>
+
+
     <script src="js/script.js"></script>
 </body>
 </html>

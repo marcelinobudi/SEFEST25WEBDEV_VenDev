@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Bakbak+One&family=Days+One&display=swap');
 .website{
-    background: linear-gradient(#395A7F,#4386D1);
+    background: linear-gradient(#395A7F,hsl(212, 61%, 54%));
+    padding: 0;
+    margin: 0;
     
 }
 .navigasi{
+    background-color:#395A7F;
+    position: sticky;
+    top: 0px;
     display: flex;
     justify-content: flex-end;
     padding: 5px;
     border-bottom: solid 1px black;
+    z-index: 3;
 }
 .navigasi-button{
     font-family: "Arya", serif;
@@ -153,6 +159,7 @@ a{
 }
 .isi-carapenggunaan{
     margin: 50px 0px 150px 0px;
+    position: relative;
 }
 .isi-carapenggunaan>#carapenggunaan-judul{
     margin-bottom: 50px;
@@ -172,6 +179,7 @@ a{
     border: 0px;
     box-shadow: 0px 0px 45px black;
     display: flex;
+    z-index: 1;
 }
 .langkah-video>.langkah{
     flex:3;
@@ -187,21 +195,57 @@ a{
     background-color: grey;
     border-radius: 40px;
 }
+.isi-carapenggunaan>div>.maskotangkattangan{
+    height: 300px;
+    position: absolute;
+    z-index: 2;
+    left: 83%;
+    top: 60%;
+}
 footer{
-    margin: 0px 85px 0px 85px;
     color: #FFFFFF;
     text-align: justify;
     justify-items: center;
+    position: relative;
 }
 footer>.footerjudul{
+    margin: 0px 85px 0px 85px;
+    margin-bottom: 50px;
     font-family: "Days One", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 48px;
 }
-footer>.footerartikel{
+footer>.footerartikel>#footerartikel{
+    margin: 0px 85px 0px 85px;
     font-family: "Bakbak One", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
+}
+.footerartikel>#credits{
+    margin: 30px 0px 30px 0px;
+    text-align: center;
+}
+.gambarbawah{
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+/*.gambarbawah>#cloudbawah{
+    width: inherit;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+    opacity: 80%;
+}*/
+.gambarbawah>#cloudatas{
+    width: inherit;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+    z-index: 2;
+    left: 0%;
+    top: 20%;
 }

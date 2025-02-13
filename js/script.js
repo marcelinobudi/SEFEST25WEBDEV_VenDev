@@ -108,3 +108,13 @@ function displayfile(){
         alert("file ini tidak didukung")
     }
 }
+
+
+
+//bagian ketika tombol buktikan ditekan
+function buktikan(){
+    //if not eror{}
+
+    //if eror{}
+    
+}

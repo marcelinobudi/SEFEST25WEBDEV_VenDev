@@ -6,11 +6,11 @@
     <link rel="stylesheet" href="css/style.css">
     <title>DeepXpose: Deepfake Detection Platform</title>
 </head>
-<body class="website">
+<body class="website" id="website">
     <nav class="navigasi">
-        <img src="assets/logo.png" alt="" id="logo" width="328px" height="71px">
+        <img src="assets/logo.png" alt="" id="logo" width="328px" height="71px"></a> 
         <div class="navigasi-button"> <a href="#dropfoto">Deteksi Gambar</a></div>
-        <div class="navigasi-button"> <a href="#langkah">Cara Pemakaian</a></div>
+        <div class="navigasi-button"> <a href="#carapenggunaan-judul">Cara Pemakaian</a></div>
         <div class="navigasi-button"> <a href="#footerartikel">Tentang Kami</a></div>
     </nav>
     <main class="isi">
@@ -26,7 +26,7 @@
             <div class="tulisandropfoto">
                 <div id="tulisancek">Cek Keaslian Gambar Anda Sekarang</div>
                 <div id="space1"></div>
-                <div><button id="tombolbuktikan" onclick="buktikan">Buktikan Gambar</button></div>
+                <div><button id="tombolbuktikan" onclick="buktikan()">Buktikan Gambar</button></div>
             </div>
         </div>
 
@@ -70,6 +70,7 @@
                     anggapvideo
                 </div>
             </div>
+            <div ><img src="assets/maskotangkattangan.png" class="maskotangkattangan" alt=""></div>
         </div>
 
 
@@ -78,13 +79,19 @@
         <div class="footerjudul">
             Tentang Kami
         </div>
-        <div class="footerartikel" id="footerartikel">
-            DeepXpose merupakan aplikasi berbasis Convolutional Neural Network atau CNN yang dapat mendeteksi gambar deepfake. DeepXpose memudahkan pengguna dalam melakukan cross-check kebenaran suatu berita sehingga dengan adanya aplikasi DeepXpose, masyarakat dapat lebih terbantu dalam mengenali berita hoaks yang menggunakan teknologi deepfake. 
-        </div>
-        <div>
-            Website ini dibuat oleh: <br>
-            Jundi Erlangga Luhur Prawira <br>
-            Marcelino Budi Prakasya
+        <div class="footerartikel">
+           <div id="footerartikel">
+                DeepXpose merupakan aplikasi berbasis Convolutional Neural Network atau CNN yang dapat mendeteksi gambar deepfake. DeepXpose memudahkan pengguna dalam melakukan cross-check kebenaran suatu berita sehingga dengan adanya aplikasi DeepXpose, masyarakat dapat lebih terbantu dalam mengenali berita hoaks yang menggunakan teknologi deepfake. 
+            </div>
+            <div id="credits">
+                Website ini dibuat oleh: <br>
+                Jundi Erlangga Luhur Prawira <br>
+                Marcelino Budi Prakasya
+            </div> 
+        </div>  
+        <div class="gambarbawah">
+            <!--<img src="assets/clouds.png" id="cloudbawah" alt="">-->
+            <img src="assets/clouds.png" id="cloudatas" alt="">
         </div>
     </footer>
 

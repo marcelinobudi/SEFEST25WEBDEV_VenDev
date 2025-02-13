@@ -1,5 +1,5 @@
 let imgBBAPI = "69916af40b37867cced6a452843ec457";
-let apiLink = "https://6625-35-197-68-141.ngrok-free.app/"
+let apiLink = "http://13.228.225.19:10000/"
 
 async function uploadImage(file) {
   

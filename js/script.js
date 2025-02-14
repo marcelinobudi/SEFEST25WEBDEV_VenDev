@@ -105,16 +105,22 @@ function displayfile(){
         pembacafile.readAsDataURL(file);
     }
     else{
-        alert("file ini tidak didukung")
+        alert("Jenis file ini tidak didukung.")
     }
 }
 
 
 
 //bagian ketika tombol buktikan ditekan
+let popup = document.getElementById("popup");
 function buktikan(){
     //if not eror{}
 
     //if eror{}
+    popup.classList.add("popup-visible");
     
+}
+//nutup popup
+function closepopup(){
+    popup.classList.remove("popup-visible");
 }

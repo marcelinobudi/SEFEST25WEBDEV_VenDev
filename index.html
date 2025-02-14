@@ -13,8 +13,14 @@
         <div class="navigasi-button"> <a href="#carapenggunaan-judul">Cara Pemakaian</a></div>
         <div class="navigasi-button"> <a href="#footerartikel">Tentang Kami</a></div>
     </nav>
+    
     <main class="isi">
-        <div class="isi-uploadgambar">
+        <div class="popup" id="popup">
+            <h1>ERROR</h1>
+            <p>Mohon maaf sistem kami sedang bermasalah. Coba lagi beberapa saat.</p>
+            <button type="button" onclick="closepopup()">Mengerti</button>
+        </div> <!--maudiubah-->
+        <div class="isi-uploadgambar" id="isi-uploadgambar">
             <div class="dropfoto" id="dropfoto">
                 <h1>Unggah Gambar Anda</h1>
                 <div class="uploadgambar-header">Jatuhkan</div>
@@ -23,13 +29,15 @@
                 <input type="file" hidden>
                 <div class="uploadgambar-support">Mendukung semua format file gambar</div>
             </div>
+            
             <div class="tulisandropfoto">
                 <div id="tulisancek">Cek Keaslian Gambar Anda Sekarang</div>
                 <div id="space1"></div>
                 <div><button id="tombolbuktikan" onclick="buktikan()">Buktikan Gambar</button></div>
+                
             </div>
         </div>
-
+        
         <div class="isi-sloganartikel">
             <div class="sloganartikel">
                 <div id="slogan">Pastikan Keaslian Gambar, Lindungi Kebenaran!</div>

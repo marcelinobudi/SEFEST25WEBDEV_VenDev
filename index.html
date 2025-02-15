@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,15 +9,23 @@
 <body class="website" id="website">
     <nav class="navigasi">
         <img src="assets/logo.png" alt="" id="logo" width="328px" height="71px"></a> 
-        <div class="navigasi-button"> <a href="#dropfoto">Deteksi Gambar</a></div>
-        <div class="navigasi-button"> <a href="#carapenggunaan-judul">Cara Pemakaian</a></div>
-        <div class="navigasi-button"> <a href="#footerartikel">Tentang Kami</a></div>
+        <div class="navigasi-menu">
+            <a href="#dropfoto"><div class="navigasi-button">Deteksi Gambar</div></a>
+            <a href="#carapenggunaan-judul"><div class="navigasi-button">Cara Pemakaian</div></a>
+            <a href="#footerartikel"><div class="navigasi-button">Tentang Kami</div></a>
+        </div>
+        
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </nav>
     
     <main class="isi">
         <div class="popup" id="popup">
-            <h1>ERROR</h1>
-            <p>Mohon maaf sistem kami sedang bermasalah. Coba lagi beberapa saat.</p>
+            <h1 id="pesan">ERROR</h1>
+            <p id="keterangan-pesan">Mohon maaf sistem kami sedang bermasalah. Coba lagi beberapa saat.</p>
             <button type="button" onclick="closepopup()">Mengerti</button>
         </div> <!--maudiubah-->
         <div class="isi-uploadgambar" id="isi-uploadgambar">
@@ -28,7 +35,7 @@
                 <div class="uploadgambar-header"> atau </div>
                 <div class="tombolbrowse">browse</div>
                 <input type="file" hidden>
-                <div class="uploadgambar-support">Mendukung semua format file gambar</div>
+                <div class="uploadgambar-support">Mendukung format file JPEG, JPG, PNG, dan WEBP</div>
             </div>
             
             <div class="tulisandropfoto">

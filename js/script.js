@@ -105,7 +105,9 @@ function displayfile(){
         pembacafile.readAsDataURL(file);
     }
     else{
-        alert("Jenis file ini tidak didukung.")
+        popup.classList.add("popup-visible");
+        document.getElementById("pesan").innerHTML = "Kesalahan";
+        document.getElementById("keterangan-pesan").innerHTML = "Mohon maaf, format file Anda tidak didukung."
     }
 }
 
@@ -115,6 +117,8 @@ function displayfile(){
 let popup = document.getElementById("popup");
 function buktikan(){
     //if not eror{}
+    //let hasil = document.getElementById("tulisancek");
+    // hasil.innerHTML = persentase
 
     //if eror{}
     popup.classList.add("popup-visible");
@@ -124,3 +128,18 @@ function buktikan(){
 function closepopup(){
     popup.classList.remove("popup-visible");
 }
+
+
+//Hamburger navbar (android)
+const hamburger = document.querySelector(".hamburger");
+const navigasi = document.querySelector(".navigasi-menu");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navigasi.classList.toggle("active");
+})
+
+document.querySelectorAll(".navigasi-button").forEach(n => n.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navigasi.classList.remove("active");
+}))

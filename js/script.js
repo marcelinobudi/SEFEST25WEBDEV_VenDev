@@ -178,7 +178,7 @@ function displayfile(){
 
 //bagian ketika tombol buktikan ditekan
 let popup = document.getElementById("popup");
-function buktikan(){
+async function buktikan(){
     
     try{
       let imgUrl = await uploadImageToIMGBB(this.files[0]);

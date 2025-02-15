@@ -1,5 +1,5 @@
 let imgBBAPI = "69916af40b37867cced6a452843ec457";
-let apiLink = "http://13.228.225.19:10000/";
+let apiLink = "http://127.0.0.1:10000/";
 
 async function uploadImageToIMGBB(file) {
   
@@ -53,22 +53,24 @@ async function detectImage(url){
     dataResponse = await response.json();
   }
   catch(error){
-    console.error("Error: ", error);
+    console.error("Error: " + error);
     alert("Terjadi kesalahan saat mendeteksi");
   }
   
-  return dataResponse;
+  return dataResponse.result;
 }
 
 
 document.getElementById('fileInput').addEventListener('change', async function(){
   let imgUrl = await uploadImageToIMGBB(this.files[0]);
   let detectionResult;
+  setTimeout(async function(){
+    if(imgUrl != null){
+      detectionResult = await detectImage(imgUrl);
+      console.log("Detection result ", detectionResult)
+      document.getElementById("hasil").innerHTML = detectionResult + "%";
+    }
+  }, 1000)
 
-  if(imgUrl != null){
-    detectionResult = await detectImage(imgUrl);
-    console.log("Detection result ", detectionResult)
-    document.getElementById("hasil") = detectionResult
-  }
 
 })

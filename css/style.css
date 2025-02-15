@@ -1,1 +1,606 @@
+@import url('https://fonts.googleapis.com/css2?family=Arya:wght@400;700&family=Bakbak+One&family=Days+One&display=swap');
+.website{
+    background: linear-gradient(#395A7F,hsl(212, 61%, 54%));
+    padding: 0;
+    margin: 0;
+    z-index: 2;
+    overflow-x: hidden;
+    
+}
+.navigasi{
+    background-color:#395A7F;
+    position: sticky;
+    top: 0px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+    border-bottom: solid 1px black;
+    z-index: 3;
+}
+.navigasi-menu{
+    display: flex;
+    flex-direction: row;
+}
+.navigasi-button{
+    font-family: "Arya", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+    color: #FFFFFF;
+    margin: 10px 7px 10px 7px;
+    cursor: pointer;
+}
+.hamburger{
+    display: none;
+    cursor: pointer;
+    align-content: center;
+    margin-right: 10px;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+#logo{
+    margin-right: auto;
+}
+.isi{
+}
+.isi>.isi-uploadgambar{
+    justify-self: center;
+    margin: 35px 85px 110px 85px;
+    /*margin: 35px 0px 110px 0px;
+    width: 1200px;*/
+    padding: 40px;
+    border: solid 1px #FFFFFF;
+    display: flex;
+    flex-direction: row;
+    border-radius: 40px;
+    background-color: #E9ECEE;
+    border: 0px;
+    box-shadow: 0px 0px 45px black; /* x,y, blur, color*/
+    
+}
+.isi-uploadgambar>.dropfoto{
+    width: 400px;
+    height: 400px;
+    align-content: center;
+    text-align: center;
+    vertical-align: middle;
+    flex: 4;
+    border-radius: 20px;
+    background-color: grey;
+    margin-right: 50px;
+    font-family: "Bakbak One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.dropfoto.active{
+    border: 2px solid #4386D1;
+}
+.dropfoto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.dropfoto>.tombolbrowse{
+    cursor: pointer;
+    color: #FFDE59
+}
+.isi-uploadgambar>.tulisandropfoto{
+    flex: 5;
+}
+.tulisandropfoto>#tulisancek{
+    font-family: "Days One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 64px;
+    margin-bottom: 65px;
+    padding-right: 50px;
+}
+.tulisandropfoto>div>#tombolbuktikan{
+    cursor: pointer;
+    font-family: "Bakbak One", serif;
+    font-weight: 400;
+    font-style: normal;
+    padding: 15px 30px 15px 30px;
+    background-color: #FFDE59;
+    font-size: 32px;
+    border: 0px;
+    border-radius: 60px;
+    box-shadow: 0px 0px 20px black;
+}
+.popup{
+    width: 300px;
+    height: 300px;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    text-align: center;
+    padding: 0 30px 30px;
+    transform: translate(-50%, -50%) scale(0.1);
+    z-index: 3;
+    align-content: center;
+    vertical-align: middle;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+.popup>h1{
+    color: #df2323;
+    font-family: "Days One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+}
+.popup>p{
+    text-align: justify;
+    font-family: "Bakbak One", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.popup>button{
+    padding: 10px 20px 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    background-color: #395A7F;
+    color: #FFFFFF;
+}
+.popup-visible{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+}
 
+.isi-sloganartikel{
+    display: flex;
+    margin: 100px 15px 100px 85px;
+}
+.isi-sloganartikel>.sloganartikel{
+    color: white;
+    margin-right: 70px;
+}
+.sloganartikel>#slogan{
+    font-family: "Days One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+.sloganartikel>#artikel{
+    text-align: justify;
+    font-family: "Bakbak One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+.isi-sloganartikel>.maskotcentang{
+    
+}
+.isi>.isi-contoh{
+    box-shadow: 0px 0px 45px black;
+    padding: 20px;
+    border-radius: 40px;
+    border: 0px;
+    background-color: #D9D9D9;
+    display: flex;
+    margin: 0px 85px 200px 85px;
+}
+.isi-contoh>.contohgambar{
+    flex: 1;
+}
+.isi-contoh>.contohgambar>.contoh{
+    height:300px;
+    border-radius: 20px;
+    border: solid 2px white;
+}
+.isi-contoh>.isi-keterangan{
+    flex: 3;
+    vertical-align: middle;
+    margin: auto;
+}
+.isi-keterangan>#persentase{
+    font-family: "Days One", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #395A7F;
+    font-size: 70px;
+    margin-bottom: 30px;
+}
+.isi-keterangan>#keterangan{
+    font-family: "Bakbak One", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #395A7F;
+    font-size: 30px;
+}
+.isi-carapenggunaan{
+    margin: 50px 0px 150px 0px;
+    position: relative;
+}
+.isi-carapenggunaan>#carapenggunaan-judul{
+    margin-bottom: 50px;
+    font-family: "Days One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 49px;
+    color: #FFFFFF;
+    text-align: center;
+}
+.isi-carapenggunaan>.langkah-video{
+    margin: 50px 85px 0px 85px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #D9D9D9;
+    border-radius: 40px;
+    border: 0px;
+    box-shadow: 0px 0px 45px black;
+    display: flex;
+    z-index: 1;
+}
+.langkah-video>.langkah{
+    flex:3;
+    font-size: 40px;
+    color: #395A7F;
+    font-family: "Bakbak One", serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+.langkah-video>.video{
+    flex: 2;
+    background-color: grey;
+    border-radius: 40px;
+}
+.isi-carapenggunaan>div>.maskotangkattangan{
+    height: 300px;
+    position: absolute;
+    z-index: 2;
+    left: 83%;
+    top: 60%;
+}
+footer{
+    padding-top: 50px;
+    background-color: #364658;
+    color: #FFFFFF;
+    text-align: justify;
+    justify-items: center;
+    position: relative;
+}
+footer>.footerjudul{
+    margin: 0px 85px 0px 85px;
+    margin-bottom: 50px;
+    font-family: "Days One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 48px;
+    text-align: center;
+}
+footer>.footerartikel>#footerartikel{
+    margin: 0px 85px 0px 85px;
+    font-family: "Bakbak One", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+.footerartikel>#credits{
+    margin: 30px 0px 30px 0px;
+    text-align: center;
+}
+.gambarbawah{
+    width: 100%;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+/*.gambarbawah>#cloudbawah{
+    width: inherit;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+    opacity: 80%;
+}*/
+.gambarbawah>#cloudatas{
+    width: inherit;
+    height: 200px;
+    object-fit: cover;
+    object-position: top;
+    z-index: 2;
+    left: 0%;
+    top: 20%;
+}
+
+@media (max-width:600px) and (min-width:450px) {
+    .website{
+        overflow-x:hidden;
+    }
+    .navigasi-menu{
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        background-color: #395A7F;
+
+    }
+    .navigasi-button{
+        border-radius: 40px;
+        border: 0;
+        box-shadow: 0px 0px 10px black;
+    }
+    .navigasi-menu.active{
+        left: 0;
+    }
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .isi>.isi-uploadgambar{
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin: 35px 40px 110px 40px;
+    }
+    .isi-uploadgambar>.dropfoto{
+        width: 100%;
+        height: 100%;
+       
+    }
+    .tulisandropfoto>#tulisancek{
+        font-size: 32px;
+        padding: 0;
+    }
+    .tulisandropfoto>div>#tombolbuktikan{
+        font-size: 26px;
+    }
+    .isi-sloganartikel{
+        display: flex;
+        flex-direction: column;
+        margin: 100px 40px 100px 40px;
+        padding: 0;
+    }
+    .isi-sloganartikel>.sloganartikel{
+        margin: 0;
+    }
+    .sloganartikel>#slogan{
+        text-align: center;
+        font-size: 30px;
+    }
+    .isi-sloganartikel>.maskotcentang{
+        margin-top: 40px;
+        align-self: center;
+    }
+    .isi-sloganartikel>.maskotcentang>img{
+        height: 300px;
+    }
+    .isi>.isi-contoh{
+        box-shadow: none;
+        padding: 20px;
+        border-radius: 0px;
+        border: 0px;
+        background: none;
+        display: flex;
+        flex-direction: column;
+        margin: 0px 40px 100px 40px;
+        align-items: center;
+    }
+    .isi-contoh>.contohgambar>.contoh{
+        height: auto;
+        width: 400px;
+    }
+    .isi-keterangan>#persentase{
+        font-size: 60px;
+        margin-top: 20px;
+        color: #FFFFFF;
+        text-align: center;
+    }
+    .isi-keterangan>#keterangan{
+        color: white;
+        text-align: justify;
+        font-size: 20px;
+    }
+    .isi-carapenggunaan>.langkah-video{
+        flex-direction: column;
+        margin: 50px 40px 0px 40px;
+    }
+    .langkah-video>.video{
+        order: -1;
+        height: auto;
+        width: 100%;
+    }
+    .langkah-video>.langkah{
+        font-size: 20px;
+    }
+    .isi-carapenggunaan>div>.maskotangkattangan{
+        height: 120px;
+        position: absolute;
+        z-index: 2;
+        left: 78%;
+        top: 80%;
+    }
+
+}
+
+@media (max-width:450px) {
+    .website{
+        overflow-x:hidden;
+    }
+    .navigasi-menu{
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        gap: 0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        background-color: #395A7F;
+    }
+    #logo{
+        width: 60%;
+        height: auto;
+    }
+    .navigasi-button{
+        border-radius: 40px;
+        border: 0;
+        box-shadow: 0px 0px 10px black;
+    }
+    .navigasi-menu.active{
+        left: 0;
+    }
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .isi>.isi-uploadgambar{
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin: 35px 5% 110px 5%;
+    }
+    .isi-uploadgambar>.dropfoto{
+        width: 100%;
+        height: 100%;
+        border-radius: 40px;
+       
+    }
+    .tulisandropfoto>#tulisancek{
+        font-size: 32px;
+        padding: 0;
+    }
+    .tulisandropfoto>div>#tombolbuktikan{
+        font-size: 26px;
+    }
+    .popup{
+        width: 200px;
+    }
+    .isi-sloganartikel{
+        display: flex;
+        flex-direction: column;
+        margin: 100px 5% 100px 5%;
+        padding: 0;
+    }
+    .isi-sloganartikel>.sloganartikel{
+        margin: 0;
+    }
+    .sloganartikel>#slogan{
+        text-align: center;
+        font-size: 30px;
+    }
+    .isi-sloganartikel>.maskotcentang{
+        margin-top: 40px;
+    }
+    .isi-sloganartikel>.maskotcentang>img{
+        width: 80%;
+        height: auto;
+    }
+    .isi>.isi-contoh{
+        box-shadow: none;
+        padding: 0;
+        border-radius: 0px;
+        border: 0px;
+        background: none;
+        display: flex;
+        flex-direction: column;
+        margin: 0px 5% 100px 5%;
+    }
+    .isi-contoh>.contohgambar>.contoh{
+        height: auto;
+        width: 90%;
+        justify-self: center;
+    }
+    .isi-keterangan>#persentase{
+        font-size: 30px;
+        margin-top: 20px;
+        color: #FFFFFF;
+        text-align: center;
+    }
+    .isi-keterangan>#keterangan{
+        color: white;
+        text-align: justify;
+        font-size: 20px;
+    }
+    .isi-carapenggunaan>.langkah-video{
+        flex-direction: column;
+        margin: 50px 5% 0px 5%;
+        background: none;
+        border: 0px;
+        box-shadow: 0 0 0;
+        padding: 0;
+    }
+    .isi-carapenggunaan>#carapenggunaan-judul{
+        font-size: 32px;
+    }
+    .langkah-video>.video{
+        order: -1;
+        height: auto;
+        width: 100%;
+    }
+    .langkah-video>.langkah{
+        font-size: 20px;
+        background-color: #D9D9D9;
+        border-radius: 40px;
+        box-shadow: 0px 0px 20px black;
+        padding: 5px;
+    }
+    .isi-carapenggunaan>div>.maskotangkattangan{
+        height: 120px;
+        position: absolute;
+        z-index: 2;
+        left: 78%;
+        top: 80%;
+    }
+    footer>.footerjudul{
+        margin: 0px 5% 0px 5%;
+        margin-bottom: 50px;
+        font-family: "Days One", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 32px;
+        text-align: center;
+    }
+    footer>.footerartikel>#footerartikel{
+        margin: 0px 5% 0px 5%;
+        text-align: justify;
+        font-family: "Bakbak One", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+    }
+    .footerartikel>#credits{
+        margin: 30px 0px 30px 0px;
+        text-align: center;
+    }
+}

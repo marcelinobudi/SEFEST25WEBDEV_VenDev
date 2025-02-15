@@ -113,7 +113,7 @@ const dropfoto = document.querySelector(".dropfoto");
 let browse = document.querySelector(".tombolbrowse");
 let input = document.querySelector('input');
 
-let file;
+var file;
 
 browse.onclick = () => {
     input.click();
@@ -155,7 +155,7 @@ function displayfile(){
     let tipefile = file.type;
     //console.log(tipefile);
 
-    let filedukung = ["image/jpeg", 'image/png', 'image/png', 'image/webp'];
+    let filedukung = ["image/jpeg", 'image/png', 'image/jpg', 'image/webp'];
     if(filedukung.includes(tipefile)){
         let pembacafile = new FileReader();
 
@@ -168,7 +168,7 @@ function displayfile(){
         pembacafile.readAsDataURL(file);
     }
     else{
-        popup.classList.add("popup-visible");
+        // popup.classList.add("popup-visible");
         document.getElementById("pesan").innerHTML = "Kesalahan";
         document.getElementById("keterangan-pesan").innerHTML = "Mohon maaf, format file Anda tidak didukung."
     }
@@ -181,18 +181,19 @@ let popup = document.getElementById("popup");
 async function buktikan(){
     
     try{
-      let imgUrl = await uploadImageToIMGBB(this.files[0]);
+      let imgUrl = await uploadImageToIMGBB(file);
       let detectionResult;
       setTimeout(async function(){
         if(imgUrl != null){
           detectionResult = await detectImage(imgUrl);
-          console.log("Detection result ", detectionResult)
+          var result = (detectionResult > 0.5) ? "Deepfake" : "Asli";
           let hasil = document.getElementById("tulisancek");
-          hasil.innerHTML = detectionResult + "%";
+          hasil.innerHTML = detectionResult + "% Deepfake" + "<br>Gambar kemungkinan " + result ;
         }
       }, 1000)
     } catch(error){
       popup.classList.add("popup-visible");
+      console.log(error);
     }
     
 }

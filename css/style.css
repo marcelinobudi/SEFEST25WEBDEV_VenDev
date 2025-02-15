@@ -321,9 +321,9 @@ footer>.footerartikel>#footerartikel{
     top: 20%;
 }
 
-@media (max-width:600px) {
+@media (max-width:600px) and (min-width:450px) {
     .website{
-        overflow-x: visible;
+        overflow-x:hidden;
     }
     .navigasi-menu{
         position: fixed;
@@ -372,6 +372,9 @@ footer>.footerartikel>#footerartikel{
     .tulisandropfoto>#tulisancek{
         font-size: 32px;
         padding: 0;
+    }
+    .tulisandropfoto>div>#tombolbuktikan{
+        font-size: 26px;
     }
     .isi-sloganartikel{
         display: flex;
@@ -438,7 +441,166 @@ footer>.footerartikel>#footerartikel{
         left: 78%;
         top: 80%;
     }
-    
 
+}
 
+@media (max-width:450px) {
+    .website{
+        overflow-x:hidden;
+    }
+    .navigasi-menu{
+        position: fixed;
+        left: -100%;
+        top: 60px;
+        gap: 0;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        background-color: #395A7F;
+    }
+    #logo{
+        width: 60%;
+        height: auto;
+    }
+    .navigasi-button{
+        border-radius: 40px;
+        border: 0;
+        box-shadow: 0px 0px 10px black;
+    }
+    .navigasi-menu.active{
+        left: 0;
+    }
+    .hamburger{
+        display: block;
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .isi>.isi-uploadgambar{
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin: 35px 5% 110px 5%;
+    }
+    .isi-uploadgambar>.dropfoto{
+        width: 100%;
+        height: 100%;
+        border-radius: 40px;
+       
+    }
+    .tulisandropfoto>#tulisancek{
+        font-size: 32px;
+        padding: 0;
+    }
+    .tulisandropfoto>div>#tombolbuktikan{
+        font-size: 26px;
+    }
+    .popup{
+        width: 200px;
+    }
+    .isi-sloganartikel{
+        display: flex;
+        flex-direction: column;
+        margin: 100px 5% 100px 5%;
+        padding: 0;
+    }
+    .isi-sloganartikel>.sloganartikel{
+        margin: 0;
+    }
+    .sloganartikel>#slogan{
+        text-align: center;
+        font-size: 30px;
+    }
+    .isi-sloganartikel>.maskotcentang{
+        margin-top: 40px;
+    }
+    .isi-sloganartikel>.maskotcentang>img{
+        width: 80%;
+        height: auto;
+    }
+    .isi>.isi-contoh{
+        box-shadow: none;
+        padding: 0;
+        border-radius: 0px;
+        border: 0px;
+        background: none;
+        display: flex;
+        flex-direction: column;
+        margin: 0px 5% 100px 5%;
+    }
+    .isi-contoh>.contohgambar>.contoh{
+        height: auto;
+        width: 90%;
+        justify-self: center;
+    }
+    .isi-keterangan>#persentase{
+        font-size: 30px;
+        margin-top: 20px;
+        color: #FFFFFF;
+        text-align: center;
+    }
+    .isi-keterangan>#keterangan{
+        color: white;
+        text-align: justify;
+        font-size: 20px;
+    }
+    .isi-carapenggunaan>.langkah-video{
+        flex-direction: column;
+        margin: 50px 5% 0px 5%;
+        background: none;
+        border: 0px;
+        box-shadow: 0 0 0;
+        padding: 0;
+    }
+    .isi-carapenggunaan>#carapenggunaan-judul{
+        font-size: 32px;
+    }
+    .langkah-video>.video{
+        order: -1;
+        height: auto;
+        width: 100%;
+    }
+    .langkah-video>.langkah{
+        font-size: 20px;
+        background-color: #D9D9D9;
+        border-radius: 40px;
+        box-shadow: 0px 0px 20px black;
+        padding: 5px;
+    }
+    .isi-carapenggunaan>div>.maskotangkattangan{
+        height: 120px;
+        position: absolute;
+        z-index: 2;
+        left: 78%;
+        top: 80%;
+    }
+    footer>.footerjudul{
+        margin: 0px 5% 0px 5%;
+        margin-bottom: 50px;
+        font-family: "Days One", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 32px;
+        text-align: center;
+    }
+    footer>.footerartikel>#footerartikel{
+        margin: 0px 5% 0px 5%;
+        text-align: justify;
+        font-family: "Bakbak One", serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 20px;
+    }
+    .footerartikel>#credits{
+        margin: 30px 0px 30px 0px;
+        text-align: center;
+    }
 }

@@ -25,7 +25,7 @@ async function uploadImageToIMGBB(file) {
   }
   catch(error){
     console.error("Error: ", error);
-    alert("Terjadi kesalahan saat mengunggah");
+    popup.classList.add("popup-visible");
     return null;
   }
 
@@ -55,7 +55,7 @@ async function detectImage(url){
   }
   catch(error){
     console.error("Error: " + error);
-    alert("Terjadi kesalahan saat mendeteksi");
+    popup.classList.add("popup-visible");
   }
   
   return dataResponse.result;
@@ -110,7 +110,7 @@ setInterval(() => {
 //bagian dropfoto
 const dropfoto = document.querySelector(".dropfoto");
 
-let browse = document.querySelector(".tombolbrowse");
+let browse = document.querySelector(".dropfoto");
 let input = document.querySelector('input');
 
 var file;
@@ -177,7 +177,7 @@ function displayfile(){
 
 
 //bagian ketika tombol buktikan ditekan
-let popup = document.getElementById("popup");
+var popup = document.getElementById("popup");
 async function buktikan(){
     
     try{

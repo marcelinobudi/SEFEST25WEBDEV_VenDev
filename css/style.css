@@ -73,6 +73,7 @@ a{
     
 }
 .isi-uploadgambar>.dropfoto{
+    cursor: pointer;
     width: 400px;
     height: 400px;
     align-content: center;
@@ -96,6 +97,8 @@ a{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 20px;
+    border: 0;
 }
 .dropfoto>.tombolbrowse{
     cursor: pointer;
@@ -263,9 +266,24 @@ a{
 
 }
 .langkah-video>.video{
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    align-self: center;
+    align-content: center;
     flex: 2;
-    background-color: grey;
     border-radius: 40px;
+    width: 100%;
+    height: 100%;
+
+}
+.video>video{
+    border-radius: 40px;
+    border: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 .isi-carapenggunaan>div>.maskotangkattangan{
     height: 300px;
@@ -472,6 +490,13 @@ footer>.footerartikel>#footerartikel{
         left: 78%;
         top: 80%;
     }
+    .footerjudul{
+        margin-right: 40px;
+        margin-right: 40px;
+    }
+    footer>.footerartikel>#footerartikel{
+        margin: 0px 20px 0px 20px;
+    }
 
 }
 
@@ -624,6 +649,7 @@ footer>.footerartikel>#footerartikel{
         order: -1;
         height: auto;
         width: 100%;
+        margin-bottom: 5%;
     }
     .langkah-video>.langkah{
         font-size: 20px;

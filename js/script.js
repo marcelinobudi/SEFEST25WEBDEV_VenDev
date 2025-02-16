@@ -33,6 +33,7 @@ async function uploadImageToIMGBB(file) {
     imgUrl = dataResponse.data.url;
   } else{
     alert("Gagal mengunggah gambar");
+    throw new Error("Gagal upload gambar");
     return null;
   }
 
@@ -83,19 +84,19 @@ function showDivs(n) {
     }
     if (slideIndex == 1){
         document.getElementById("persentase").innerHTML = "93% DeepFake";
-        document.getElementById("keterangan").innerHTML = "Setelah digunakan DeepDetection yang bermodel CNN, gambar tersebut TERBUKTI PALSU."
+        document.getElementById("keterangan").innerHTML = "Setelah digunakan model CNN dari DeepXpose, gambar tersebut TERBUKTI PALSU."
     }
     else if (slideIndex == 2){
         document.getElementById("persentase").innerHTML = "99% DeepFake";
-        document.getElementById("keterangan").innerHTML = "Setelah digunakan DeepDetection yang bermodel CNN, gambar tersebut TERBUKTI PALSU."
+        document.getElementById("keterangan").innerHTML = "Setelah digunakan model CNN dari DeepXpose, gambar tersebut TERBUKTI PALSU."
     }
     else if (slideIndex == 3){
         document.getElementById("persentase").innerHTML = "53% DeepFake";
-        document.getElementById("keterangan").innerHTML = "Setelah digunakan DeepDetection yang bermodel CNN, gambar tersebut MUNGKIN PALSU."
+        document.getElementById("keterangan").innerHTML = "Setelah digunakan model CNN dari DeepXpose, gambar tersebut MUNGKIN PALSU."
     }
     else if (slideIndex == 4){
         document.getElementById("persentase").innerHTML = "0% DeepFake";
-        document.getElementById("keterangan").innerHTML = "Setelah digunakan DeepDetection yang bermodel CNN, gambar tersebut TERBUKTI ASLI."
+        document.getElementById("keterangan").innerHTML = "Setelah digunakan model CNN dari DeepXpose, gambar tersebut TERBUKTI ASLI."
     }
     x[slideIndex - 1].style.display = 'block'; //memunculkan slide ke index-1, jadi misal foto pertama indexnya 0, jadi slideindex yang nilainya 1 - 1 =0
     
@@ -186,7 +187,7 @@ async function buktikan(){
       setTimeout(async function(){
         if(imgUrl != null){
           detectionResult = await detectImage(imgUrl);
-          var result = (detectionResult > 0.5) ? "Deepfake" : "Asli";
+          var result = (detectionResult > 50.0) ? "Deepfake" : "Asli";
           let hasil = document.getElementById("tulisancek");
           hasil.innerHTML = detectionResult + "% Deepfake" + "<br>Gambar kemungkinan " + result ;
         }

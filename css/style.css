@@ -8,6 +8,29 @@
     overflow-x: hidden;
     
 }
+.loading{
+    margin: auto;
+    width: 60px;
+    height: 60px;
+    left: 50%;
+    top: 50%;
+    border: 5px solid #4386D1;
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s linear infinite;
+    position: fixed;
+    z-index: 4;
+    visibility: hidden;
+}
+.loading-visible{
+    visibility: visible;
+}
+
+@keyframes spin{
+    100%{
+        transform: rotate(360deg);
+    }
+}
 .navigasi{
     background-color:#395A7F;
     position: sticky;
@@ -319,6 +342,9 @@ footer>.footerartikel>#footerartikel{
 .footerartikel>#credits{
     margin: 30px 0px 30px 0px;
     text-align: center;
+    font-family: "Bakbak One", serif;
+    font-weight: 400;
+    font-style: normal;
 }
 .gambarbawah{
     width: 100%;

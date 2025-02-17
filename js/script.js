@@ -1,6 +1,6 @@
 
 let imgBBAPI = "69916af40b37867cced6a452843ec457";
-let apiLink = "http://127.0.0.1:10000/";
+let apiLink = "https://deepxpose-cnn-model-api.onrender.com/";
 
 async function uploadImageToIMGBB(file) {
   
